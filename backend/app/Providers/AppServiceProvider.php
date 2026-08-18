@@ -247,6 +247,7 @@ class AppServiceProvider extends ServiceProvider
     private function availableLocales(): array
     {
         return [
+            'en' => 'Русский',
             'en' => 'English',
             'pl' => 'Polski',
             'tr' => 'Türkçe',
