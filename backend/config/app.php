@@ -91,10 +91,6 @@ return [
     'available_locales' => [
         'ru' => 'Русский',
         'en' => 'English',
-        'pl' => 'Polski',
-        'tr' => 'Türkçe',
-        'de' => 'Deutsch',
-        'vi' => 'Tiếng Việt',
     ],
 
     'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
