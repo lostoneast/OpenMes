@@ -81,14 +81,15 @@ return [
     |
     */
 
-    'locale' => env('APP_LOCALE', 'en'),
+    'locale' => env('APP_LOCALE', 'ru'),
 
-    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'en'),
+    'fallback_locale' => env('APP_FALLBACK_LOCALE', 'ru'),
 
     // UI locales offered by the language switcher (code => display name). Must
     // have a matching lang/<code>.json. Used by SetLocale middleware (validation)
     // and shared to the React frontend via HandleInertiaRequests.
     'available_locales' => [
+        'ru' => 'Русский',
         'en' => 'English',
         'pl' => 'Polski',
         'tr' => 'Türkçe',
