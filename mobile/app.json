@@ -15,7 +15,7 @@
       "package": "com.openmes.mobile",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#f6f5f1"
       },
       "predictiveBackGestureEnabled": false
     },
@@ -35,12 +35,12 @@
           "image": "./assets/images/splash-icon.png",
           "imageWidth": 200,
           "resizeMode": "contain",
-          "backgroundColor": "#ffffff",
+          "backgroundColor": "#f6f5f1",
           "dark": {
             "image": "./assets/images/splash-icon.png",
             "imageWidth": 200,
             "resizeMode": "contain",
-            "backgroundColor": "#0f172a"
+            "backgroundColor": "#131211"
           }
         }
       ],

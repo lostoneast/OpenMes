@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Offline — OpenMES</title>
     <link rel="manifest" href="/manifest.json">
-    <meta name="theme-color" content="#1e40af">
+    <meta name="theme-color" content="#cc4e25">
     @vite(['resources/css/app.css'])
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center p-4">

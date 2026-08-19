@@ -23,6 +23,7 @@ class DemoDataSeeder extends Seeder
             AirFilterDemoSeeder::class,
             HrDemoSeeder::class,
             OeeAndDowntimeDemoSeeder::class,
+            ModularConstructionDemoSeeder::class,
         ]);
     }
 }

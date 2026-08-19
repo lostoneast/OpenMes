@@ -124,7 +124,7 @@
     --om-muted: #6f6c66;
     --om-faint: #9b9892;
     --om-faintest: #c4c0b8;
-    --om-accent: #ea5a2b;
+    --om-accent: #cc4e25;
     --om-running: #1c9a55;
     --om-running-bg: #e6f4ea;
     --om-pending: #6f6c66;
@@ -136,7 +136,7 @@
     --om-done: #54514b;
     --om-done-bg: #ecebe7;
     /* Schedule board additions: accent tint, accepted (blue), maintenance (purple). */
-    --om-accent-bg: #fbede7;
+    --om-accent-bg: #f6e5df;
     --om-accepted: #3e73c4;
     --om-accepted-bg: #e7effa;
     --om-maint: #7a5fb0;
@@ -146,7 +146,7 @@
     --om-rejected: #a32d2d;
     --om-rejected-bg: #fcebeb;
     --om-track: #efede8;
-    --om-deep: #a8301f;
+    --om-deep: #93311d;
     --om-planned: #dcdad3;
 }
 
@@ -167,7 +167,7 @@ html.dark {
     --om-muted: #a6a29b;
     --om-faint: #6e6a63;
     --om-faintest: #3a3833;
-    --om-accent: #f2632f;
+    --om-accent: #e16238;
     --om-running: #2bbe6e;
     --om-running-bg: rgba(43, 190, 110, 0.16);
     --om-pending: #a6a29b;
@@ -178,7 +178,7 @@ html.dark {
     --om-downtime-bg: rgba(224, 165, 60, 0.16);
     --om-done: #a6a29b;
     --om-done-bg: #242220;
-    --om-accent-bg: rgba(242, 99, 47, 0.16);
+    --om-accent-bg: rgba(225, 98, 56, 0.18);
     --om-accepted: #5e92e0;
     --om-accepted-bg: rgba(94, 146, 224, 0.16);
     --om-maint: #a98ee0;

@@ -30,8 +30,8 @@ const LIGHT = {
     onInk: '#FFFFFF',
 
     // Accent
-    accent: '#EA5A2B',
-    accentBg: '#FBEDE7',
+    accent: '#CC4E25',
+    accentBg: '#F6E5DF',
 
     // States (fg / bg pairs)
     running: '#1C9A55',
@@ -58,14 +58,14 @@ const LIGHT = {
     // a stop whose cause is known (deeper than `blocked`, which means the stop
     // is still waiting on one), and planned time that is not a loss.
     track: '#EFEDE8',
-    deep: '#A8301F',
+    deep: '#93311D',
     planned: '#DCDAD3',
 
     // Overlay scrim
     scrim: 'rgba(10, 9, 8, 0.4)',
 
     // Focus ring around accent-bordered inputs
-    focusRing: 'rgba(234, 90, 43, 0.12)',
+    focusRing: 'rgba(204, 78, 37, 0.14)',
 };
 
 /** Dark palette — mirrors html.dark --om-* in backend app.css verbatim. */
@@ -86,8 +86,8 @@ const DARK: typeof LIGHT = {
 
     onInk: '#131211',
 
-    accent: '#F2632F',
-    accentBg: 'rgba(242, 99, 47, 0.16)',
+    accent: '#E16238',
+    accentBg: 'rgba(225, 98, 56, 0.18)',
 
     running: '#2BBE6E',
     runningBg: 'rgba(43, 190, 110, 0.16)',
@@ -110,7 +110,7 @@ const DARK: typeof LIGHT = {
     planned: '#3A3833',
 
     scrim: 'rgba(0, 0, 0, 0.6)',
-    focusRing: 'rgba(242, 99, 47, 0.18)',
+    focusRing: 'rgba(225, 98, 56, 0.2)',
 };
 
 /**

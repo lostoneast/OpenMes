@@ -1,6 +1,6 @@
 {
   "$schema": "https://schema.tauri.app/config/2",
-  "productName": "openmes-desktop",
+  "productName": "OpenMES Desktop",
   "version": "0.19.0",
   "identifier": "com.openmes.desktop",
   "build": {
@@ -14,7 +14,7 @@
     "windows": [
       {
         "label": "main",
-        "title": "OpenMES Desktop — panel sterowania",
+        "title": "OpenMES Desktop — панель управления",
         "width": 940,
         "height": 700,
         "minWidth": 760,

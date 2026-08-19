@@ -1,29 +1,35 @@
 name: Deploy to Production
 
 on:
-  workflow_run:
-    workflows: ["Tests"]
-    types:
-      - completed
-    branches:
-      - main
+  push:
+    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   deploy:
     name: Deploy to server
     runs-on: self-hosted
-    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
+      - name: Pre-check environment
+        working-directory: /opt/openmmes
+        run: |
+          pwd
+          git rev-parse --is-inside-work-tree
+          docker compose version
+
       - name: Pull latest code
         working-directory: /opt/openmmes
-        run: git pull origin main
+        run: |
+          git fetch origin main
+          git checkout main
+          git pull --ff-only origin main
 
       - name: Build and restart containers
         working-directory: /opt/openmmes
         run: docker compose up -d --build
 
-      - name: Verify deployment
+      - name: Post-check deployment health
         run: |
           sleep 5
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost)
