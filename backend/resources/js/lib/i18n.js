@@ -19,7 +19,7 @@
 const localeFiles = import.meta.glob('../../../lang/*.json');
 
 let messages = {};
-let activeLocale = 'en';
+let activeLocale = 'ru';
 // Plant timezone, set from the Inertia `timezone` prop at bootstrap. Undefined
 // means "use the browser's zone" (Intl default) until configured.
 let activeTimezone;

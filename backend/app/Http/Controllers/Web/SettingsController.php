@@ -109,7 +109,7 @@ class SettingsController extends Controller
             'backflush_on_pallet_creation' => json_decode($rows['backflush_on_pallet_creation']?->value ?? 'false', true) ?? false,
             'workflow_mode' => json_decode($rows['workflow_mode']?->value ?? '"status"', true) ?? 'status',
             'pin_login_enabled' => json_decode($rows['pin_login_enabled']?->value ?? 'false', true) ?? false,
-            'language' => json_decode($rows['language']?->value ?? '"en"', true) ?? 'en',
+            'language' => json_decode($rows['language']?->value ?? '"ru"', true) ?? 'ru',
             'schedule_view_mode' => json_decode($rows['schedule_view_mode']?->value ?? '"weekly"', true) ?? 'weekly',
             'schedule_shifts_per_day' => json_decode($rows['schedule_shifts_per_day']?->value ?? '1', true) ?? 1,
             'schedule_horizon_weeks' => json_decode($rows['schedule_horizon_weeks']?->value ?? '6', true) ?? 6,
@@ -302,7 +302,7 @@ class SettingsController extends Controller
         }
 
         try {
-            Artisan::call('db:seed', ['--class' => 'PrintShopDemoSeeder', '--force' => true]);
+            Artisan::call('db:seed', ['--class' => 'DemoDataSeeder', '--force' => true]);
         } catch (\Throwable $e) {
             report($e);
 
@@ -316,7 +316,7 @@ class SettingsController extends Controller
         );
 
         return redirect()->route('settings.system')
-            ->with('success', __('Sample data loaded successfully. Lines, work orders, operators and product types have been created.'));
+            ->with('success', __('Sample data loaded successfully. Demo lines, work orders, operators and product types have been created.'));
     }
 
     /**
@@ -366,7 +366,7 @@ class SettingsController extends Controller
             'backflush_on_pallet_creation' => (bool) ($validated['backflush_on_pallet_creation'] ?? false),
             'workflow_mode' => $validated['workflow_mode'],
             'pin_login_enabled' => (bool) ($validated['pin_login_enabled'] ?? false),
-            'language' => $validated['language'] ?? 'en',
+            'language' => $validated['language'] ?? 'ru',
             'schedule_view_mode' => $validated['schedule_view_mode'],
             'schedule_shifts_per_day' => $shiftsPerDay,
             'schedule_horizon_weeks' => (int) $validated['schedule_horizon_weeks'],

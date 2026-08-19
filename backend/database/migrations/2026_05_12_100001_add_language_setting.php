@@ -9,7 +9,7 @@ return new class extends Migration
     {
         DB::table('system_settings')->insertOrIgnore([
             'key' => 'language',
-            'value' => json_encode('en'),
+            'value' => json_encode('ru'),
             'description' => 'Application language (en, pl)',
         ]);
     }
