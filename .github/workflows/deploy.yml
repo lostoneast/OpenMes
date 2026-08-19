@@ -7,35 +7,28 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to server
-    runs-on: self-hosted
+    name: Deploy to 72.56.12.132
+    runs-on: ubuntu-latest
 
     steps:
-      - name: Pre-check environment
-        working-directory: /opt/openmmes
-        run: |
-          pwd
-          git rev-parse --is-inside-work-tree
-          docker compose version
-
-      - name: Pull latest code
-        working-directory: /opt/openmmes
-        run: |
-          git fetch origin main
-          git checkout main
-          git pull --ff-only origin main
-
-      - name: Build and restart containers
-        working-directory: /opt/openmmes
-        run: docker compose up -d --build
-
-      - name: Post-check deployment health
-        run: |
-          sleep 5
-          STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost)
-          echo "HTTP status: $STATUS"
-          if [ "$STATUS" != "200" ] && [ "$STATUS" != "302" ]; then
-            echo "Deployment verification failed!"
-            exit 1
-          fi
-          echo "Deployment successful!"
+      - name: Deploy over SSH
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: 72.56.12.132
+          username: root
+          password: ${{ secrets.DEPLOY_SSH_PASSWORD }}
+          script_stop: true
+          script: |
+            cd /opt/openmmes
+            git fetch origin main
+            git checkout main
+            git pull --ff-only origin main
+            docker compose up -d --build
+            sleep 5
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost)
+            echo "HTTP status: $STATUS"
+            if [ "$STATUS" != "200" ] && [ "$STATUS" != "302" ]; then
+              echo "Deployment verification failed!"
+              exit 1
+            fi
+            echo "Deployment successful!"
