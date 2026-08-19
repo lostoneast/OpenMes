@@ -247,12 +247,8 @@ class AppServiceProvider extends ServiceProvider
     private function availableLocales(): array
     {
         return [
-            'en' => 'Русский',
             'en' => 'English',
-            'pl' => 'Polski',
-            'tr' => 'Türkçe',
-            'de' => 'Deutsch',
-            'vi' => 'Tiếng Việt',
+            'en' => 'Русский',
         ];
     }
 }

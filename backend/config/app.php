@@ -89,8 +89,8 @@ return [
     // have a matching lang/<code>.json. Used by SetLocale middleware (validation)
     // and shared to the React frontend via HandleInertiaRequests.
     'available_locales' => [
-        'ru' => 'Русский',
         'en' => 'English',
+        'ru' => 'Русский',        
     ],
 
     'faker_locale' => env('APP_FAKER_LOCALE', 'en_US'),
