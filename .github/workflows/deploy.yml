@@ -20,12 +20,14 @@ jobs:
           script_stop: true
           script: |
             cd /opt/openmmes
+            export HTTP_PORT=8080
+            export HTTPS_PORT=8443
             git fetch origin main
             git checkout main
             git pull --ff-only origin main
             docker compose up -d --build
             sleep 5
-            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost)
+            STATUS=$(curl -s -o /dev/null -w "%{http_code}" http://localhost:8080)
             echo "HTTP status: $STATUS"
             if [ "$STATUS" != "200" ] && [ "$STATUS" != "302" ]; then
               echo "Deployment verification failed!"
