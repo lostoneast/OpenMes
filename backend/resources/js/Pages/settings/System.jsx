@@ -9,19 +9,9 @@ import { __ } from '../../lib/i18n';
 
 // Common reporting currencies (ISO 4217). Names are proper nouns, not translated.
 const CURRENCIES = [
-    ['PLN', 'Polish Złoty'],
+    ['RUB', 'Russian ruble'],
     ['EUR', 'Euro'],
-    ['USD', 'US Dollar'],
-    ['GBP', 'British Pound'],
-    ['CHF', 'Swiss Franc'],
-    ['CZK', 'Czech Koruna'],
-    ['SEK', 'Swedish Krona'],
-    ['NOK', 'Norwegian Krone'],
-    ['DKK', 'Danish Krone'],
-    ['HUF', 'Hungarian Forint'],
-    ['RON', 'Romanian Leu'],
-    ['UAH', 'Ukrainian Hryvnia'],
-    ['VND', 'Vietnamese Đồng'],
+    ['USD', 'US Dollar']
 ];
 
 const CARD_CLASS = 'bg-om-card border border-om-line rounded-om p-6';
